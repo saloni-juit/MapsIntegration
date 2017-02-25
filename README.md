@@ -6,3 +6,4 @@ MapsIntegration
 -   There are 2 json files - countries.json and cities.json - one containing all the countries and their latitudes and longitudes and the     other containing the cities of 2 countries. (cities do not contain for all the countries as this is hardcoded data)
 -   The values of latitude and longitudes are mocked.
 -   The application is gracefully responsive.
+-   The commit was made with the node_modules so that the testing of this would be easier.
