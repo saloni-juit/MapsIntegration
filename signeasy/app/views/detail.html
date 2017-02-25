@@ -1,0 +1,26 @@
+<section class="detail-page">
+    <h1>Detail page</h1>
+    <div class="controls">
+        <!-- custom directive of dropdown -->
+        <!--selected City : {{city}} -->
+        <dropdown class="dropdown" list="cities" placeholder="Cities" selected="city" property="cityName"></dropdown>
+        
+        <div>
+            <label for="latitude">Latitude</label>
+            <input type="text" ng-model="mapCenter[0]" value="{{lat}}" id="latitude" />
+        </div>
+        <div>
+            <label for="longitude">Longitude</label>
+            <input type="text" ng-model="mapCenter[1]" value="{{lon}}" id="longitude" />
+        </div>
+    </div>
+    <div class="map">
+        <ng-map zoom="11" center="{{mapCenter}}" ng-model="mapCenter">
+            <marker position="{{mapCenter}}" />
+            <shape name="circle" radius="400" center="{{mapCenter}}" radius="4000" />
+            <control name="overviewMap" opened="true" />
+        </ng-map>
+    </div>
+
+    <input type="submit" value="Update Map" ng-click="UpdateMap()">
+</section>

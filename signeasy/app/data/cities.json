@@ -1,0 +1,23 @@
+[{
+    "countryName": "Somaliland",
+    "cities": [{
+        "cityName": "Hargeisa",
+        "cityLatitude": "11.435",
+        "cityLongitude": "46.0165"
+    }, {
+        "cityName": "Berbara",
+        "cityLatitude": "10.435",
+        "cityLongitude": "45.0165"
+    }]
+}, {
+    "countryName": "SouthGeorgia",
+    "cities": [{
+        "cityName": "Grytviken1",
+        "cityLatitude": "-53.283333",
+        "cityLongitude": "-36.500000"
+    }, {
+        "cityName": "Grytviken2",
+        "cityLatitude": "-52.283333",
+        "cityLongitude": "-37.500000"
+    }]
+}]

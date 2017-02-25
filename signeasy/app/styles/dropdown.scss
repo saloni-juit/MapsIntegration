@@ -1,0 +1,106 @@
+$content-bg-color: #FFFFFF;
+$border-radius : 3px;
+$border-color : #eeeeee;
+$secondary-bg-color: #F8F8F8;
+$secondary-text-color: #999999;
+$icon-color: #999999;
+$primary-bg-color: #EAEAEA;
+
+dropdown {
+    margin-bottom: 20px;
+    font-size: 14px !important;
+    display: inline-block;
+    > div {
+        > div {
+            &.dropdown-display {
+                min-width: 205px;
+                text-align: left;
+                background: $content-bg-color;
+                padding: 0.75em 1.5em 0.75em 0.75em;
+                display: inline-block;
+                font-weight: 500;
+                cursor: pointer;
+                position: relative;
+                border: 1px solid $border-color;
+                
+                &:after {
+                    margin-top: 3px;
+                    border: solid 1px;
+                    border-left-width: 0px;
+                    border-top-width: 0;
+                    content: "";
+                    display: inline-block;
+                    transform: rotate(45deg);
+                    height: 8px;
+                    width: 8px;
+                    border-color: $icon-color;
+                    position: relative;
+                    left: 8px;
+                    bottom: 1px;
+                    float: right;
+                }
+                span{
+                    &.selectedValue{
+                        color:#333333;
+                    }
+                }
+            }
+            &.dropdown-list {
+                float: left;
+                position: inherit;
+                bottom: 1px;
+                width: 100%;
+                left: -2.46em;
+                z-index: 3;
+                border-top: 1px solid $border-color;
+                transform: scale(1, 0);
+                transition: transform ease 250ms;
+                color: $secondary-text-color;
+                font-weight: 500;
+                font-size: 14px;
+                > div {
+                    position: absolute;
+                    width: 100%;
+                    z-index: 3;
+                    cursor: pointer;
+                    background: $content-bg-color;
+                    max-height: 289px;
+                    overflow-y: auto;
+                    > div {
+                        float: left;
+                        width: 100%;
+                        padding: 0 10px;
+                        box-sizing: border-box;
+                        border: solid 1px $border-color;
+                        border-top: none;
+                        text-align: left;
+                        padding-left: 1.1em;
+                        &:hover {
+                            background: $primary-bg-color;
+                        }
+                        &.selected {
+                            color: #333333;
+                            background-color: #f7f7f7;
+                        }
+                        > {
+                            * {
+                                height: 40px;
+                                line-height: 40px !important;
+                                display: inline-block;
+                                vertical-align: middle;
+                            }
+                            span {
+                                position: relative;
+                                box-sizing: border-box;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+      
+        &.show > div.dropdown-list {
+            transform: scale(1, 1);
+        }
+    }
+}

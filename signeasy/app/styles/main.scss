@@ -1,0 +1,154 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+body {
+    padding: 0;
+}
+
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+
+.header,
+.marketing,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* Custom page header */
+
+.header {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+    /* Make the masthead heading the same height as the navigation */
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 40px;
+        padding-bottom: 19px;
+    }
+}
+
+
+/* Custom page footer */
+
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+
+/* Main marketing message and sign up button */
+
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+    }
+}
+
+
+/* Supporting marketing content */
+
+.marketing {
+    margin: 40px 0;
+    p + h4 {
+        margin-top: 28px;
+    }
+}
+
+
+/* Responsive: Portrait tablets and up */
+
+@media only screen and (max-width: 950px) {
+    .detail-page {
+        .dropdown,.dropdown-display{
+            min-width: 100% !important;
+        }
+        .map,
+        .controls {
+            min-width: 100% !important;
+            input{
+                min-width: 100%;
+            }
+        }
+    }
+}
+
+
+/* Main page */
+
+.container {
+    max-width: 90%;
+}
+
+.main {
+    h1 {
+        margin-left: 13px;
+    }
+    ul.countries {
+        list-style-type: none;
+        -webkit-padding-start: 0px;
+        img{
+          width: 9%;
+          float: left;
+        }
+        .data{
+          float: right;
+          width: 80%;
+        }
+        li {
+            border: solid 1px gray;
+            display: inline-block;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+            color: gray;
+            &:hover {
+                color: black;
+                border-color: black;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+/* Detail Page */
+
+.detail-page {
+    h1{
+        margin-bottom: 20px;
+    }
+    display: inline-block;
+    width: 100%;
+    .map {
+        width: 80%;
+        float: right;
+        min-height: 400px;
+    }
+    .controls {
+        width: 20%;
+        float: left;
+        input{
+          width: 90%;
+          margin-bottom: 20px;
+        }
+    }
+}

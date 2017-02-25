@@ -1,0 +1,15 @@
+<div class="main">
+    <h1>List of Countries</h1>
+    <div class="row marketing">
+        <ul class="countries">
+            <li ng-repeat="country in countries track by $index" ng-click="detailPage($index)">
+                <img src="{{country.imageUrl}}" ng-if="country.imageUrl"/>
+                <div class="data">
+                    <div> {{country.CountryName}} </div>
+                    <div> {{country.CapitalLatitude}}</div>
+                    <div> {{country.CapitalLongitude}}</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
